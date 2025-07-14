@@ -15,6 +15,8 @@ if (!empty($_GET['dept'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Filtrage par catégorie</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/style.css">
+
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
@@ -23,6 +25,8 @@ if (!empty($_GET['dept'])) {
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item"><a class="nav-link" href="listes_obj.php">Retour à l'accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="treat_deconnex.php">Deconnexion </a></li>
+
                 </ul>
             </div>
         </div>

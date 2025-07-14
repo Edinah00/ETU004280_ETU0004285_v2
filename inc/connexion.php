@@ -10,7 +10,7 @@
                 die('Erreur de connexion à la base de données : ' . mysqli_connect_error());
             }
 
-            // Optionnel : définir l'encodage des caractères pour gérer les accents (UTF-8 recommandé)
+            // Op   tionnel : définir l'encodage des caractères pour gérer les accents (UTF-8 recommandé)
             mysqli_set_charset($connect, 'utf8mb4');
         }
 

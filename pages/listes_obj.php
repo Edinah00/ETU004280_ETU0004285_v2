@@ -10,6 +10,8 @@ $global_obj = get_all_object();
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Liste des objets</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+
 </head>
 <body class="bg-light">
 
@@ -20,9 +22,16 @@ $global_obj = get_all_object();
         <a href="filtrage.php" class="btn btn-outline-info">Filtrer par catégorie</a>
       </div>
     </div>
-  </nav>
+     <div class="container">
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="treat_deconnex.php">Deconnexion </a></li>
 
-  <div class="container py-4">
+                </ul>
+            </div>
+        </div>
+  </nav>
+         <div class="container py-4">
     <h2 class="text-center mb-4">Liste des objets disponibles</h2>
     
     <?php if (mysqli_num_rows($global_obj) > 0): ?>
