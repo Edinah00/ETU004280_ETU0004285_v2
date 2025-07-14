@@ -1,0 +1,33 @@
++-------------+         +------------------+         +-----------+
+|  membre     |         |  categorie_objet |         | emprunt   |
+|-------------|         |------------------|         |-----------|
+| id_membre PK|<--+     | id_categorie PK  |         | id_emprunt PK
+| nom         |   |     | nom_categorie    |         | id_objet FK
+| date_naiss  |   +-----|                  |         | id_membre FK
+| genre       |                               +----->| date_emprunt
+| email       |                                     | date_retour
+| ville       |
+| mdp         |
+| image_profil|
++-------------+
+
+       ^
+       |
+       |           +-----------+
+       |           |   objet   |
+       |           |-----------|
+       +-----------| id_objet PK
+                   | nom_objet
+                   | id_categorie FK
+                   | id_membre FK
+                   +-----------+
+                         |
+                         v
+                   +----------------+
+                   |  images_objet  |
+                   |----------------|
+                   | id_image PK    |
+                   | id_objet FK    |
+                   | nom_image      |
+                   +----------------+
+9l8fdynV

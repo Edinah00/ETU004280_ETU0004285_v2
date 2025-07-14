@@ -1,0 +1,11 @@
+To-Do List – Répartition des tâches
+Lecture du sujet par tous
+
+Création base de données (tables + données test) — Edinah
+
+Connexion et inscription (pages + traitement) — Mpiaro
+
+Liste des objets avec date retour si emprunt — Edinah
+
+Filtrage par catégorie — Mpiaro
+
