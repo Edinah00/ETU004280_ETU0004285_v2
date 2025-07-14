@@ -129,3 +129,49 @@ CREATE or replace view V_objet_categorie as
 select o.*,c.nom_categorie from objet_empObj as o
 join  categorie_objet_empObj as c
  on c.id_categorie=o.id_categorie;
+
+CREATE OR REPLACE VIEW v_objets_complets AS
+SELECT 
+    o.id_objet,
+    o.nom_objet,
+    o.id_categorie,
+    c.nom_categorie,
+    o.id_membre,
+    m.nom AS proprietaire_nom,
+    m.email AS proprietaire_email,
+    m.ville AS proprietaire_ville
+FROM objet_empObj o
+JOIN categorie_objet_empObj c ON o.id_categorie = c.id_categorie
+JOIN membre_empObj m ON o.id_membre = m.id_membre;
+
+CREATE OR REPLACE VIEW v_images_par_objet AS
+SELECT 
+    i.id_image,
+    i.id_objet,
+    i.nom_image,
+    o.nom_objet
+FROM images_objet_empObj i
+JOIN objet_empObj o ON o.id_objet = i.id_objet;
+
+
+CREATE OR REPLACE VIEW v_historique_emprunts AS
+SELECT 
+    e.id_emprunt,
+    e.id_objet,
+    o.nom_objet,
+    e.id_membre AS emprunteur_id,
+    m.nom AS emprunteur_nom,
+    m.ville AS emprunteur_ville,
+    e.date_emprunt,
+    e.date_retour
+FROM emprunt_empObj e
+JOIN objet_empObj o ON o.id_objet = e.id_objet
+JOIN membre_empObj m ON m.id_membre = e.id_membre
+ORDER BY e.date_emprunt DESC;
+
+
+SELECT * FROM vue_objets_complets WHERE id_objet = 12;
+
+SELECT * FROM vue_images_par_objet WHERE id_objet = 12;
+
+SELECT * FROM vue_historique_emprunts WHERE id_objet = 12;
