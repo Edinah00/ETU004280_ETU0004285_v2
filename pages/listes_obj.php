@@ -48,7 +48,7 @@ $global_obj = get_all_object();
                 ?>
                   <p class="card-text text-muted mb-2">Date de retour : <?php echo htmlspecialchars($detail_data['date_retour']); ?></p>
                 <?php } ?>
-                <a href="#" class="btn btn-outline-primary mt-auto">Voir plus</a>
+                 <a href="fiche_objet.php?id_obj=<?php echo $global['id_objet']; ?>" class="btn btn-outline-primary mt-auto">Voir fiche</a>
               </div>
             </div>
           </div>

@@ -30,5 +30,10 @@ function get_all_category(){
     $resultat=mysqli_query(dBconnect(),$rqt);
     return $resultat;
 }
+function get_object_by_id($id_objet){
+    $rqt=sprintf("SELECT * from categorie_objet_empObj");
+    $resultat=mysqli_query(dBconnect(),$rqt);
+    return $resultat;
 
+}
  ?>
